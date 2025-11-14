@@ -1,0 +1,204 @@
+<!--
+  rasel_ahmed_hvac_website.html
+  Single-file responsive HVAC business website for an individual technician.
+  Edit the `SITE` object in the <script> near the bottom to update Name / City / Phone.
+--><!doctype html>
+
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rasel Ahmed — HVAC Technician in Riyadh</title>
+  <meta name="description" content="Rasel Ahmed — HVAC technician in Riyadh (Thulaim). Services: AC Installation, Ducting, Split AC, Cooler, VRF and Maintenance.">
+  <style>
+    :root{--accent:#0b66ff;--dark:#0b1724;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, Arial, sans-serif;margin:0;color:var(--dark);line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+    .logo{font-weight:700;color:var(--accent)}
+    nav a{margin-left:18px;text-decoration:none;color:inherit}.hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:28px 0}
+.hero .intro h1{font-size:28px;margin:0 0 8px}
+.hero .intro p{margin:0 0 16px;color:var(--muted)}
+.cta{display:flex;gap:12px}
+.btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+.btn.secondary{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+.service{padding:14px;border-radius:10px;background:#f8fbff;border:1px solid #e6f0ff}
+.service h3{margin:0 0 8px}
+.service p{margin:0;color:var(--muted);font-size:14px}
+
+.about, .contact, .reviews{margin-top:36px;padding:18px;border-radius:10px;background:#fff;border:1px solid #eef2f7}
+.about p{margin:8px 0;color:var(--muted)}
+
+footer{padding:18px 0;color:var(--muted);text-align:center;font-size:14px}
+
+/* Contact form */
+form .row{display:flex;gap:10px;margin-bottom:10px}
+input, textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #d1d5db}
+textarea{min-height:120px}
+
+/* small screens */
+@media(min-width:720px){
+  .hero{grid-template-columns:1fr 420px}
+  .services{grid-template-columns:repeat(3,1fr)}
+  .service{min-height:110px}
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">Rasel Ahmed — HVAC</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header><main>
+  <section id="home" class="hero">
+    <div class="intro">
+      <h1 id="hero-title">Rasel Ahmed — Professional HVAC Technician</h1>
+      <p id="hero-sub">AC Installation, Ducting, Split AC, Cooler, VRF and Maintenance in Riyadh (Thulaim).</p>
+      <div class="cta">
+        <a id="call-btn" class="btn" href="#">Call Now</a>
+        <a id="quote-btn" class="btn secondary" href="#contact">Get a Quote</a>
+      </div>
+
+      <div style="margin-top:18px;font-size:14px;color:var(--muted)">
+        <strong>Fast response</strong> • Trusted workmanship • Competitive prices
+      </div>
+    </div>
+
+    <aside style="padding:18px;border-radius:10px;background:#f1f5f9">
+      <h3>Quick Facts</h3>
+      <ul style="padding-left:18px;color:var(--muted)">
+        <li>Location: <span id="location-text">Riyadh, Thulaim</span></li>
+        <li>Services: AC Installation, Ducting, VRF, Maintenance</li>
+        <li>Availability: On-call &amp; Scheduled Visits</li>
+      </ul>
+      <div style="margin-top:12px">
+        <a id="whatsapp-btn" class="btn" href="#">WhatsApp</a>
+      </div>
+    </aside>
+  </section>
+
+  <section id="services" class="services">
+    <div class="service">
+      <h3>AC Installation</h3>
+      <p>Split & window type AC installation with safe mounting, piping, and refrigerant handling.</p>
+    </div>
+    <div class="service">
+      <h3>Ducting</h3>
+      <p>Custom duct fabrication and installation for ventilation and HVAC systems.</p>
+    </div>
+    <div class="service">
+      <h3>Split Type AC</h3>
+      <p>Full servicing and repairs for split-type systems including leak fix and charging.</p>
+    </div>
+    <div class="service">
+      <h3>Cooler Works</h3>
+      <p>Cooling system setup & maintenance for evaporative coolers and chillers.</p>
+    </div>
+    <div class="service">
+      <h3>VRF Systems</h3>
+      <p>Installation and servicing of VRF systems for residential and commercial needs.</p>
+    </div>
+    <div class="service">
+      <h3>Maintenance</h3>
+      <p>Routine preventive maintenance to keep systems efficient and lower energy bills.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p id="about-text">I am Rasel Ahmed, an experienced HVAC technician based in Riyadh (Thulaim). I provide reliable installation, ducting, and maintenance services with a focus on safety and customer satisfaction.</p>
+    <p><strong>Experience:</strong> Years of hands-on HVAC service with residential and light-commercial projects.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>If you'd like a fast quote, call or send a message — or use the form below.</p>
+
+    <div style="display:grid;grid-template-columns:1fr;gap:12px;">
+      <div>
+        <strong>Phone:</strong> <span id="phone-text">YOUR-MOBILE-NUMBER</span><br>
+        <strong>City:</strong> <span id="city-text">Riyadh (Thulaim)</span>
+      </div>
+
+      <form id="contact-form">
+        <div class="row">
+          <input type="text" id="name" placeholder="Your name" required>
+          <input type="tel" id="phone" placeholder="Phone or WhatsApp" required>
+        </div>
+        <div class="row">
+          <input type="email" id="email" placeholder="Email (optional)">
+        </div>
+        <div>
+          <textarea id="message" placeholder="Describe the job / location / preferred time"></textarea>
+        </div>
+        <div style="margin-top:8px;display:flex;gap:10px">
+          <button type="submit" class="btn">Send Message</button>
+          <a id="call-btn-2" class="btn secondary" href="#">Call</a>
+        </div>
+        <div id="form-result" style="margin-top:8px;color:var(--muted)"></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <h3>Customer Reviews</h3>
+    <p style="color:var(--muted)">(Add customer testimonials here to build trust.)</p>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="footer-year">2025</span> Rasel Ahmed — HVAC Technician • Riyadh (Thulaim)
+</footer>
+
+  </div>  <script>
+    // Edit these values to personalize the site quickly
+    const SITE = {
+      name: 'Rasel Ahmed',
+      city: 'Riyadh, Thulaim',
+      phone: 'YOUR-MOBILE-NUMBER', // replace with +9665XXXXXXXX or any format
+    }
+
+    // Fill page with site values
+    document.getElementById('hero-title').textContent = SITE.name + ' — Professional HVAC Technician';
+    document.getElementById('hero-sub').textContent = 'AC Installation, Ducting, Split AC, Cooler, VRF and Maintenance in ' + SITE.city + '.';
+    document.getElementById('location-text').textContent = SITE.city;
+    document.getElementById('phone-text').textContent = SITE.phone;
+    document.getElementById('city-text').textContent = SITE.city;
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // Buttons
+    const telHref = 'tel:' + SITE.phone;
+    const waHref = 'https://wa.me/' + (SITE.phone.replace(/[^0-9]/g,''));
+    document.getElementById('call-btn').href = telHref;
+    document.getElementById('call-btn-2').href = telHref;
+    document.getElementById('whatsapp-btn').href = waHref;
+
+    // Contact form behaviour (client-side only)
+    document.getElementById('contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const el = document.getElementById('form-result');
+      if(!name || !phone){ el.textContent = 'Please enter name and phone.'; return; }
+      // This demo doesn't send data to a server. Show a message and prepare mailto link.
+      el.textContent = 'Preparing message...';
+      const subject = encodeURIComponent('Service request from ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nPhone: ' + phone + '\nMessage: ' + message);
+      const mailto = 'mailto:?subject=' + subject + '&body=' + body;
+      setTimeout(()=>{
+        el.innerHTML = 'Message ready. <a href="'+mailto+'">Send by email</a> or call ' + SITE.phone + '.';
+      },700);
+    });
+  </script></body>
+</html>
